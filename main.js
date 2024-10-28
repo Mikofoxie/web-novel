@@ -1,4 +1,4 @@
-const links = document.querySelectorAll('.my-link');  // lấy class my-link từ html lưu vào biến links
+const links = document.querySelectorAll('.my-link');
 const contents = document.querySelectorAll('.catalog-menu-right');
 
 const buttonAccount = document.querySelectorAll('.js-account')
@@ -7,7 +7,7 @@ const modalClose = document.querySelector('.js-close')
 
 
 
-var dangKy = document.getElementById("login");  // lấy ID của form login từ html lưu vào biến dangKy
+var dangKy = document.getElementById("login");
 var dangNhap = document.getElementById("register");
 var button = document.getElementById("btn");
 var loginButton = document.getElementById('loginButton');
@@ -137,7 +137,7 @@ function login(){
     if(counter > 3){
       counter = 1;
   }
-}, 5600); // 5.6s chuyển sang hình ảnh tiếp theo
+}, 5600);
 
 // loading web
 var loader = document.getElementById('loading');
