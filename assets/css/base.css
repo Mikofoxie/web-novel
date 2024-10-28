@@ -116,8 +116,8 @@
 .social-icons :is(.fb-icon, .tw-icon, .gg-icon) {
     font-size: 38px;
     background: linear-gradient(to right, #ff3a3a, #ff9800);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
+    --webkit-background-clip: text;
+    --moz-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .social-icons .link-icon:hover {
