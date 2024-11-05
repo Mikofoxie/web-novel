@@ -1,0 +1,151 @@
+Folder PATH listing
+Volume serial number is 26B9-B731
+C:.
+|   myproject.txt
+|   
++---admin
+|   |   add_product.php
+|   |   edit_product.php
+|   |   index.php
+|   |   remove_product.php
+|   |   
+|   +---config
+|   |       database.php
+|   |       
+|   \---styles
+|           Admin.css
+|           
++---assets
+|   +---css
+|   |   |   index.css
+|   |   |   responsive.css
+|   |   |   
+|   |   +---base
+|   |   |       base.css
+|   |   |       normalize.css
+|   |   |       scroll_bar.css
+|   |   |       
+|   |   +---components
+|   |   |       animation.css
+|   |   |       loading.css
+|   |   |       menu.css
+|   |   |       
+|   |   \---pages
+|   |           aboutus.css
+|   |           faq.css
+|   |           product.css
+|   |           
+|   +---fonts              
+|   \---img
+|       |   ico_login.svg
+|       |   
+|       +---about
+|       |       books-reading.jpeg
+|       |       gioi-thieu.jpg
+|       |       open-book.jpg
+|       |       service.jpg
+|       |       
+|       +---arrow
+|       |       arrow-drop-down-line.png
+|       |       
+|       +---books
+|       |   +---lightnovel
+|       |   |       5_centimet.jpg
+|       |   |       arifureta.jpeg
+|       |   |       classroom-of-the-elite.jpg
+|       |   |       Date-A-Live-Encore.jpeg
+|       |   |       hanh-trinh-cua-elaina-12-1.jpeg
+|       |   |       hen_uoc_mua_he_.jpg
+|       |   |       LN_10-C_VN_result.jpg
+|       |   |       ReZero-Kara-Hajimeru-Isekai-Seikatsu.jpg
+|       |   |       slime-10.jpg
+|       |   |       slime.jpg
+|       |   |       thang_9_khong_co_cau.jpg
+|       |   |       The_Angel_Next_Door_Spoils_Me_Rotten.jpg
+|       |   |       vo_trong_game.jpg
+|       |   |       
+|       |   +---manga
+|       |   |       manga_conan.jpg
+|       |   |       manga_has_color.jpg
+|       |   |       
+|       |   +---science
+|       |   |       nguon-goc-cac-loai-sach-kh.jpg
+|       |   |       
+|       |   +---self-help
+|       |   |       ki_nang_song.jpg
+|       |   |       tu_tot_den_vi_dai.jpg
+|       |   |       
+|       |   \---textbook
+|       |           english-grammar-in-use-1.jpg
+|       |           grammar-english-in-use.jpg
+|       |           hai_so_phan.jpg
+|       |           
+|       +---characters
+|       |       chino.png
+|       |       mona.png
+|       |       nekopara.png
+|       |       
+|       +---features
+|       |       clock.png
+|       |       rocket.png
+|       |       zoom.png
+|       |       
+|       +---loading
+|       |       loading.gif
+|       |       
+|       +---logo
+|       |       book-logo.png
+|       |       
+|       +---menu
+|       |       icon-book.png
+|       |       icon-red-book.png
+|       |       japanese-dolls.png
+|       |       orange-book.png
+|       |       phone.png
+|       |       ruler.png
+|       |       user-groups.png
+|       |       wrapped-gift.png
+|       |       
+|       +---slider
+|       |       2gether-main-banner.jpg
+|       |       date-a-live.png
+|       |       lightnovel.jpg
+|       |       
+|       \---stationery
+|           +---accessories
+|           |       bookmark.jpg
+|           |       casio.jpg
+|           |       moc_khoa.jpg
+|           |       postcard.jpg
+|           |       ruler.jpg
+|           |       
+|           +---files
+|           |       bia_kep_ho_so.jpg
+|           |       
+|           \---pens
+|                   but_bi.jpg
+|                   but_muc.jpg
+|                   
++---pages
+|   +---about
+|   |       aboutus.html
+|   |       
+|   +---faq
+|   |       faq.html
+|   |       
+|   \---products
+|           product-1.html
+|           product-10.html
+|           product-2.html
+|           product-3.html
+|           product-4.html
+|           product-5.html
+|           product-6.html
+|           product-7.html
+|           product-8.html
+|           product-9.html
+|           
+\---public
+        index.html
+        main.js
+        

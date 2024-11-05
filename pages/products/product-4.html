@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../../assets/fonts/fontawesome-free-6.1.1-web/css/all.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/base/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/index.css" />
+    <link rel="stylesheet" href="../../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../../assets/css/components/menu.css" />
+    <link rel="stylesheet" href="../../assets/css/base/scroll_bar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/loading.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/product.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <div id="loading"></div>
+    <header id="header">
+      <div class="header-container">
+        <div class="nav-logo-mobile">
+          <a href="../../public/index.html">
+            <img src="../../assets/img/logo/book-logo.png" alt="" />
+            <h1>Light Book</h1>
+          </a>
+        </div>
+
+        <!-- Thẻ chứa item nav container -->
+        <div class="nav-container">
+          <div class="nav-img">
+            <a href="../../public/index.html">
+              <img src="../../assets/img/logo/book-logo.png" alt="" />
+              <h1>Light Book</h1>
+            </a>
+          </div>
+
+          <div class="menu-options">
+            <div class="menu-options-icon">
+              <i class="ri-apps-2-line"></i>
+            </div>
+            <div class="arrow-down-icon">
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+
+            <div class="catalog-menu-dropdown">
+              <h1 class="title-catalog-left">Danh mục</h1>
+              <div class="catalog-menu-container">
+                <div class="catalog-menu-left column-4">
+                  <ul class="catalog-vertical-menu">
+                    <li>
+                      <a href="" class="my-link" data-target="sach-trong-nuoc"
+                        >Sách trong nước</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="my-link" data-target="sach-ngoai-nuoc"
+                        >Sách nước ngoài</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="my-link" data-target="figure"
+                        >Figure</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="my-link" data-target="manga">Manga</a>
+                    </li>
+                    <li>
+                      <a href="" class="my-link" data-target="do-luu-niem"
+                        >Đồ lưu niệm</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="my-link" data-target="dung-cu-hoc-tap"
+                        >Dụng cụ học tập</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="my-link" data-target="about-us"
+                        >Về chúng tôi</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="my-link" data-target="contact-us"
+                        >Thông tin liên hệ</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="catalog-menu-right column-8 sach-trong-nuoc active"
+                >
+                  <div class="catalog-menu-item">
+                    <h1 class="title-catalog-right">📕 Sách trong nước</h1>
+                  </div>
+                  <div class="catalog-menu-content">
+                    <div class="catalog-menu-content-row">
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/textbook/hai_so_phan.jpg);
+                            "
+                          ></div>
+                          <p>Văn học</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/lightnovel/slime.jpg);
+                            "
+                          ></div>
+                          <p>Light novel</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/self-help/ki_nang_song.jpg);
+                            "
+                          ></div>
+                          <p>Kĩ năng sống</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/textbook/english-grammar-in-use-1.jpg);
+                            "
+                          ></div>
+                          <p>Ngoại ngữ</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/self-help/tu_tot_den_vi_dai.jpg);
+                            "
+                          ></div>
+                          <p>Kinh tế</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/science/nguon-goc-cac-loai-sach-kh.jpg);
+                            "
+                          ></div>
+                          <p>Khoa học</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-right column-8 sach-ngoai-nuoc">
+                  <div class="catalog-menu-item">
+                    <h1 class="title-catalog-right">📗 Sách nước ngoài</h1>
+                  </div>
+                  <div class="catalog-menu-content">
+                    <div class="catalog-menu-content-row">
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/textbook/hai_so_phan.jpg);
+                            "
+                          ></div>
+                          <p>Văn học</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/lightnovel/arifureta.jpeg);
+                            "
+                          ></div>
+                          <p>Light novel</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/self-help/ki_nang_song.jpg);
+                            "
+                          ></div>
+                          <p>Kĩ năng sống</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/self-help/tu_tot_den_vi_dai.jpg);
+                            "
+                          ></div>
+                          <p>Kinh tế</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/science/nguon-goc-cac-loai-sach-kh.jpg);
+                            "
+                          ></div>
+                          <p>Khoa học</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-right column-8 figure">
+                  <div class="catalog-menu-item">
+                    <h1 class="title-catalog-right">🎎 Figure</h1>
+                  </div>
+                  <div class="catalog-menu-content">
+                    <div class="catalog-menu-content-row">
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/characters/nekopara.png);
+                            "
+                          ></div>
+                          <p>Vtuber</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/characters/chino.png);
+                            "
+                          ></div>
+                          <p>Anime</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/characters/mona.png);
+                            "
+                          ></div>
+                          <p>Game</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-right column-8 manga">
+                  <div class="catalog-menu-item">
+                    <h1 class="title-catalog-right">📙 Manga</h1>
+                  </div>
+                  <div class="catalog-menu-content">
+                    <div class="catalog-menu-content-row">
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/manga/manga_has_color.jpg);
+                            "
+                          ></div>
+                          <p>Manga có màu</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/books/manga/manga_conan.jpg);
+                            "
+                          ></div>
+                          <p>Manga thường</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-right column-8 do-luu-niem">
+                  <div class="catalog-menu-item">
+                    <h1 class="title-catalog-right">🎁 Đồ lưu niệm</h1>
+                  </div>
+                  <div class="catalog-menu-content">
+                    <div class="catalog-menu-content-row">
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/stationery/accessories/moc_khoa.jpg);
+                            "
+                          ></div>
+                          <p>Móc khoá</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/stationery/accessories/bookmark.jpg);
+                            "
+                          ></div>
+                          <p>Bookmark</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/stationery/accessories/postcard.jpg);
+                            "
+                          ></div>
+                          <p>Postcard</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-right column-8 dung-cu-hoc-tap">
+                  <div class="catalog-menu-item">
+                    <h1 class="title-catalog-right">📐 Dụng cụ học tập</h1>
+                  </div>
+                  <div class="catalog-menu-content">
+                    <div class="catalog-menu-content-row">
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/stationery/accessories/ruler.jpg);
+                            "
+                          ></div>
+                          <p>Thước kẻ</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/stationery/pens/but_muc.jpg);
+                            "
+                          ></div>
+                          <p>Bút viết</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/stationery/files/bia_kep_ho_so.jpg);
+                            "
+                          ></div>
+                          <p>Bìa kẹp</p>
+                        </a>
+                      </div>
+                      <div class="content-col column-2">
+                        <a href="">
+                          <div
+                            class="product-item"
+                            style="
+                              background-image: url(../../assets/img/stationery/accessories/casio.jpg);
+                            "
+                          ></div>
+                          <p>Máy tính</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-right column-8 about-us">
+                  <div class="catalog-menu-item">
+                    <h1 class="title-catalog-right">
+                      Về công ty của chúng tôi
+                    </h1>
+                  </div>
+                  <div class="catalog-menu-content">
+                    <div class="introduct-company">
+                      <h4 class="title-company">Về Light Book</h4>
+                      <p class="description-company">
+                        Light Book là một công ty nhà sách uy tín và chuyên
+                        nghiệp với đội ngũ nhân viên giàu kinh nghiệm và nhiệt
+                        tình. Công ty chúng tôi cung cấp cho khách hàng một
+                        loạt các sản phẩm sách đa dạng và phong phú, từ sách
+                        giáo khoa, sách văn học, các tác phẩm về light novel
+                        đến sách kỹ năng sống.
+                      </p>
+                      <h4 class="title-company">Cam kết</h4>
+                      <p class="description-company">
+                        Chúng tôi cam kết đem đến cho khách hàng những trải
+                        nghiệm mua sắm thú vị và chất lượng cao nhất. Với sự
+                        tận tâm và chuyên nghiệp, chúng tôi tin rằng Book
+                        Light sẽ là địa điểm đáng tin cậy cho tất cả các độc
+                        giả và người yêu sách.
+                      </p>
+                      <a href="../about/aboutus.html" class="btn-company"
+                        >Xem chi tiết</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-menu-right column-8 contact-us">
+                  <div class="catalog-menu-item">
+                    <h1 class="title-catalog-right">Thông tin liên hệ</h1>
+                  </div>
+                  <div class="catalog-menu-content">
+                    <div class="from-company">
+                      <div class="from-info-company column-4">
+                        <section class="info-contact-company">
+                          <i
+                            class="icon_location fa-solid fa-location-dot"
+                          ></i>
+                          <h3 class="title-contact-info">Địa chỉ</h3>
+                          <div class="text-contact-info">
+                            <p class="address-info">Quận 10, TP.HCM</p>
+                            <p class="address-info">40/3, St.Điện Biên Phủ</p>
+                          </div>
+                        </section>
+                        <section class="info-contact-company">
+                          <i class="icon-phone fa-solid fa-phone"></i>
+                          <h3 class="title-contact-info">Điện thoại</h3>
+                          <div class="text-contact-info">
+                            <a href="tel:+84321325324213">
+                              <p class="phone-info">+84 321325324213</p>
+                            </a>
+                          </div>
+                        </section>
+                        <section class="info-contact-company">
+                          <i class="icon-email fa-solid fa-envelope"></i>
+                          <h3 class="title-contact-info">Email</h3>
+                          <div class="text-contact-info">
+                            <a href="mailto:lightbook@gmail.com">
+                              <p class="email-info">lightbook@gmail.com</p>
+                            </a>
+                          </div>
+                        </section>
+                      </div>
+                      <div class="from-contact column-8">
+                        <div class="message-contact-company">
+                          <div class="title-message-contact">
+                            <h2 class="title-message">
+                              Hãy gửi tin nhắn cho chúng tôi
+                            </h2>
+                            <p class="description-message">
+                              Nếu bạn có bất kỳ câu hỏi nào vui lòng liên hệ
+                              với chúng tôi để chúng tôi có thể hỗ trợ bạn tốt
+                              hơn
+                            </p>
+                          </div>
+                          <div class="from-contact-company">
+                            <form action="">
+                              <!-- <input class="form-control" type="email" required="" placeholder="username" oninvalid="this.setCustomValidity('Please Enter valid email')"></input> -->
+                              <section class="section-form">
+                                <input
+                                  class="form-control"
+                                  required
+                                  title=""
+                                  type="text"
+                                  placeholder="Nhập tên của bạn"
+                                  oninvalid="this.setCustomValidity('Vui lòng nhập tên của bạn')"
+                                  oninput="setCustomValidity('')"
+                                />
+                              </section>
+                              <section class="section-form">
+                                <input
+                                  class="form-control"
+                                  required
+                                  title=""
+                                  type="email"
+                                  placeholder="Nhập email của bạn"
+                                  oninvalid="this.setCustomValidity('Vui lòng nhập email của bạn')"
+                                  oninput="setCustomValidity('')"
+                                />
+                              </section>
+                              <section class="section-form-area">
+                                <textarea
+                                  class="form-control message-box"
+                                  required
+                                  title=""
+                                  id="message"
+                                  maxlength="1000"
+                                  placeholder="Nhập tin nhắn của bạn"
+                                  oninvalid="this.setCustomValidity('Vui lòng nhập nội dung tin nhắn')"
+                                  oninput="setCustomValidity('')"
+                                ></textarea>
+                              </section>
+                              <div class="send-form">
+                                <button class="btn-send">Gửi</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-options-m">
+            <div class="menu-options-icon-m">
+              <i class="ri-apps-2-line"></i>
+            </div>
+          </div>
+
+          <!-- Search bar Begin -->
+          <div class="search-bar">
+            <form action="">
+              <input type="text" placeholder="Nhập tên sách cần tìm kiếm..." />
+
+              <button type="submit" class="btn-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+          <!-- Search bar End -->
+
+          <!-- Navigation bar Begin -->
+          <ul class="nav-menu">
+            <li class="notification">
+              <a href="javascript:void(0)"
+                ><span>Thông báo</span>
+                <i class="icon_bell fa-solid fa-bell"></i>
+                <span class="dot-notification"></span>
+              </a>
+
+              <div class="header-notify">
+                <header class="header_notify-header">
+                  <h3>Thông báo</h3>
+                </header>
+
+                <div class="content-notify">
+                  <span class="icon-notlogin"></span>
+                  <div class="text-notlogin">
+                    <div class="warning-notlogin">Vui lòng đăng nhập để</div>
+                    <div class="warning-notlogin">xem thông báo</div>
+                  </div>
+
+                  <div class="wrap-notification">
+                    <a class="notification-list" href="">
+                      <img
+                        src="../../assets/img/books/lightnovel/LN_10-C_VN_result.jpg"
+                        class="img-notify"
+                      />
+                      <div class="text-content-notify">
+                        <div class="title-content">
+                          Light Book có thông báo mới dành cho bạn
+                        </div>
+                        <div class="description-content">
+                          <p>
+                            Sản phẩm Elaina tập 10 đã ra! Nhanh tay đặt hàng kẻo
+                            lỡ kèo bạn nhé.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="wrap-notification">
+                    <a class="notification-list" href="">
+                      <img src="../../assets/img/books/lightnovel/slime.jpg" class="img-notify" />
+                      <div class="text-content-notify">
+                        <div class="title-content">
+                          Light Book có thông báo mới dành cho bạn
+                        </div>
+                        <div class="description-content">
+                          <p>
+                            Light Novel Slime tập 4 đã ra! Nhanh tay đặt hàng
+                            kẻo lỡ kèo bạn nhé.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="wrap-notification">
+                    <a class="notification-list" href="">
+                      <img
+                        src="../../assets/img/characters/nekopara.png"
+                        class="img-notify"
+                      />
+                      <div class="text-content-notify">
+                        <div class="title-content">
+                          Light Book có thông báo mới dành cho bạn
+                        </div>
+                        <div class="description-content">
+                          <p>
+                            Figure Nekopara đã có! Nhanh tay đặt hàng kẻo lỡ kèo
+                            bạn nhé.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <footer class="footer-notify">
+                  <div class="account-notify">
+                    <button class="login">Đăng nhập</button>
+                  </div>
+
+                  <div class="account-notify">
+                    <button class="register">Đăng ký</button>
+                  </div>
+
+                  <div class="view-all">
+                    <a href="" class="link-view">Xem tất cả</a>
+                  </div>
+                </footer>
+              </div>
+            </li>
+
+            <li>
+              <a href=""
+                ><span>Giỏ hàng</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:void(0)" class="js-account"
+                ><span>Tài khoản</span>
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- Navigation bar End -->
+        </div>
+      </div>
+    </header>
+
+    <section class="container-product">
+      <div class="wrap-product full-width">
+        <div class="row-product-item">
+          <div class="col-product-image full-width-mobile">
+            <div class="wrap-img">
+              <img
+                src="../../assets/img/books/lightnovel/slime-10.jpg"
+                alt=""
+                class="img-product"
+              />
+              <div class="options-product">
+                <div class="row-options-product">
+                  <div class="col-options-product">
+                    <div class="wrap-option-product">
+                      <a href="" class="btn-link-option">
+                        <span class="btn-text-option">Đọc thử</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-options-product">
+                    <div class="wrap-option-product">
+                      <a href="" class="btn-link-option">
+                        <span class="btn-text-option">Mua hàng</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-info-product full-width-mobile">
+            <div class="product-info-wrap">
+              <div class="tag-product-info">
+                <div class="wrap-tag-info">
+                  <div class="icon-tag">
+                    <i class="icon-tag-price fa-solid fa-tags"></i>
+                  </div>
+
+                  <span class="icon-list-text">
+                    <span class="post-info">
+                      <a href="" class="post-info__terms-list-item"
+                        >Light novel,</a
+                      >
+                      <a href="" class="post-info__terms-list-item">Sách,</a>
+                      <a href="" class="post-info__terms-list-item">Sách mới</a>
+                    </span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="container-heading-title-product">
+                <h2 class="heading-title-product">
+                  <a href=""
+                    >Diệt Slime Suốt 300 Năm, Tôi Levelmax Lúc Nào Chẳng Hay –
+                    Tập 10</a
+                  >
+                </h2>
+              </div>
+
+              <div class="container-price-product">
+                <div class="price-product">
+                  <b>Giá:</b>
+                  <span>118.000đ</span>
+                </div>
+              </div>
+
+              <div class="container-boxed-info-product">
+                <div class="row-boxed-info-product">
+                  <div class="col-boxed-info-product">
+                    <div class="wrap-boxed-info-product">
+                      <div class="author-container-info-product">
+                        <b>Tác giả:</b>
+                        <span>Morita Kisetsu</span>
+                      </div>
+
+                      <div class="illustrator-container-info-product">
+                        <b>Người minh họa / Nghệ sĩ:</b>
+                        <span>Benio</span>
+                      </div>
+
+                      <div class="translator-container-info-product">
+                        <b>Dịch giả:</b>
+                        <span>Mai</span>
+                      </div>
+
+                      <div class="size-container-info-product">
+                        <b>Khổ sách:</b>
+                        <span>13 x 18 cm</span>
+                      </div>
+
+                      <div class="cover-book-container-info-product">
+                        <b>Loại bìa:</b>
+                        <span>Bìa mềm</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-boxed-info-product">
+                    <div class="wrap-boxed-info-product">
+                      <div class="number-of-pages-container-info-product">
+                        <b>Số trang:</b>
+                        <span>448</span>
+                      </div>
+
+                      <div class="ISBN-container-info-product">
+                        <b>ISBN:</b>
+                        <span>8935325001192</span>
+                      </div>
+
+                      <div class="release-container-info-product">
+                        <b>NXB:</b>
+                        <span>Thế giới</span>
+                      </div>
+
+                      <div class="year-container-info-product">
+                        <b>Năm XB:</b>
+                        <span>2021</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <section class="gift-container">
+                <div class="wrap-gift-container">
+                  <div class="row-gift-container">
+                    <div class="col-gift-container">
+                      <div class="wrap-gift-btn">
+                        <h3>Quà tặng</h3>
+                      </div>
+                    </div>
+
+                    <div class="col-description-gift-container">
+                      <div class="wrap-text-gift">
+                        <b
+                          >2 postcard 10x15cm, random 1 card PVC trong (có thể
+                          có hoặc không có card này)</b
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="share-container">
+                <div class="row-share-container">
+                  <div class="text-share">
+                    <span class="heading-share-title">Chia sẻ:</span>
+                  </div>
+
+                  <div class="icon-share-container">
+                    <ul>
+                      <li class="social-link-btn">
+                        <a href=""
+                          ><i class="ri-twitter-fill twitter-footer"></i
+                        ></a>
+                      </li>
+                      <li class="social-link-btn">
+                        <a href=""
+                          ><i class="ri-facebook-box-fill facebook-footer"></i
+                        ></a>
+                      </li>
+                      <li class="social-link-btn">
+                        <a href=""
+                          ><i class="ri-instagram-fill instagram-footer"></i
+                        ></a>
+                      </li>
+                      <li class="social-link-btn">
+                        <a href=""
+                          ><i class="ri-messenger-fill message-footer"></i
+                        ></a>
+                      </li>
+
+                      <li class="social-link-btn">
+                        <a href=""
+                          ><i class="ri-discord-fill discord-footer"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <section class="introduct-product">
+          <div class="introduct-product-container">
+            <div class="wrap-introduct-container">
+              <div class="heading-introduct-product">
+                <h2 class="text-heading-introduct">Giới thiệu</h2>
+              </div>
+
+              <div class="text-warp-editor">
+                <div class="text-editor">
+                  <h2>
+                    Diệt Slime Suốt 300 Năm, Tôi Levelmax Lúc Nào Chẳng Hay –
+                    Tập 10
+                  </h2>
+                  <p>
+                    Xin chào các bạn và cảm ơn các bạn đã chọn tập 10 của Slime
+                    Taoshite 300-nen, Shiranai Uchi ni Level Max ni
+                    Nattemashita! Tôi hy vọng bạn thích bộ truyện cho đến nay.
+                    Thật vui khi viết về hành trình của Azusa từ một người phụ
+                    nữ làm công ăn lương làm việc quá sức trở thành một phù thủy
+                    bất tử. Tôi luôn bị mê hoặc bởi ý tưởng về luân hồi và tôi
+                    thích khám phá những cách khác nhau mà mọi người có thể chọn
+                    để sống cuộc sống của mình sau khi họ có cơ hội thứ hai.
+                    Trong tập này, Azusa phải đối mặt với một số thử thách mới
+                    khi cố gắng bảo vệ gia đình mới của mình khỏi một kẻ thù
+                    hùng mạnh. Cô ấy cũng sẽ phải đưa ra một số lựa chọn khó
+                    khăn về tương lai của mình. Tôi hy vọng bạn sẽ tham gia cùng
+                    tôi trong chương tiếp theo của câu chuyện về cô ấy! Cảm ơn
+                    bạn một lần nữa vì đã đọc, và tôi hy vọng bạn sẽ thích tập
+                    10!
+
+                    <br />Trân trọng,<br />
+                    Morita Kisetsu
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="footer background-product">
+      <div class="footer-container">
+        <div class="footer-row width-content full-width">
+          <section class="footer-col column-4">
+            <h3 class="heading-footer">Công ty</h3>
+            <ul>
+              <li class="content-footer">
+                <a href="./aboutus.html">Về chúng tôi</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Dịch vụ của chúng tôi</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Chính sách riêng tư</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Chương trình liên kết</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="footer-col column-4 full-width">
+            <h3 class="heading-footer">Nhận sự giúp đỡ</h3>
+            <ul>
+              <li class="content-footer">
+                <a href="../faq/faq.html">FAQ</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Dịch vụ vận chuyển</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Chính sách bảo hành</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Đặt hàng</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Phương thức thanh toán</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="footer-col column-4 full-width">
+            <h3 class="heading-footer">Tài khoản của tôi</h3>
+            <ul>
+              <li class="content-footer">
+                <a href="">Đăng nhập/Tạo mới tài khoản</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Thay đổi địa chỉ khách hàng</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Chi tiết tài khoản</a>
+              </li>
+              <li class="content-footer">
+                <a href="">Lịch sử mua hàng</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="footer-col column-4 full-width">
+            <h3 class="heading-footer">Theo dõi chúng tôi</h3>
+            <ul>
+              <li class="social-links">
+                <a href="">
+                  <i class="ri-twitter-fill twitter-footer"></i>
+                </a>
+              </li>
+              <li class="social-links">
+                <a href="">
+                  <i class="ri-facebook-box-fill facebook-footer"></i>
+                </a>
+              </li>
+              <li class="social-links">
+                <a href="">
+                  <i class="ri-instagram-fill instagram-footer"></i>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </footer>
+
+    <!-- The tag contains login and register forms -->
+    <div class="modal js-modal">
+      <div class="modal-overlay js-close"></div>
+      <div class="modal-body">
+        <div class="modal-inner">
+          <div class="form-box">
+            <div class="button-box">
+              <div id="btn"></div>
+              <button
+                type="button"
+                class="toggle-btn active-form"
+                onclick="login()"
+                id="loginButton"
+              >
+                Đăng nhập
+              </button>
+              <button
+                type="button"
+                class="toggle-btn"
+                onclick="register()"
+                id="registerButton"
+              >
+                Đăng ký
+              </button>
+            </div>
+          </div>
+
+          <div class="social-icons">
+            <a href="" class="link-icon" title="Đăng nhập Facebook">
+              <i class="ri-facebook-circle-fill fb-icon"></i>
+            </a>
+
+            <a href="" class="link-icon" title="Đăng nhập Google">
+              <i class="ri-google-fill gg-icon"></i>
+            </a>
+
+            <a href="" class="link-icon" title="Đăng nhập Twitter">
+              <i class="ri-twitter-fill tw-icon"></i>
+            </a>
+          </div>
+
+          <form id="login" action="" class="input-group">
+            <input
+              type="text"
+              required
+              class="input-field"
+              placeholder="Nhập tên tài khoản"
+            />
+            <input
+              type="text"
+              required
+              class="input-field"
+              placeholder="Nhập mật khẩu"
+            />
+            <input type="checkbox" class="checkbox" id="remember-login" /><span>
+              <label for="remember-login"> Ghi nhớ đăng nhập </label></span
+            >
+            <a href="" class="forgot-pass">Quên mật khẩu?</a>
+            <button type="submit" class="submit-button">Đăng nhập</button>
+          </form>
+
+          <form id="register" action="" class="input-group">
+            <input
+              type="text"
+              required
+              class="input-field"
+              placeholder="Nhập tên tài khoản"
+            />
+            <input
+              type="email"
+              required
+              class="input-field"
+              placeholder="Nhập email"
+            />
+            <input
+              type="text"
+              required
+              class="input-field"
+              placeholder="Nhập mật khẩu"
+            />
+            <input
+              type="text"
+              required
+              class="input-field"
+              placeholder="Nhập lại mật khẩu"
+            />
+            <input
+              type="checkbox"
+              class="checkbox"
+              id="agree-to-the-terms"
+            /><span>
+              <label for="agree-to-the-terms"
+                >Tôi đồng ý với điều khoản và dịch vụ
+              </label>
+            </span>
+            <button type="submit" class="submit-button">Đăng Ký</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Form End -->
+
+    <div class="menu-overlay">
+      <div class="menu-t-b">
+        <header class="header-t-b">
+          <span class="icon-t-b">
+            <i class="ri-arrow-left-line icon-arrow-left arrow-js"></i>
+          </span>
+          <h1 class="title-menu-t-b">Danh mục</h1>
+          <div></div>
+        </header>
+
+        <div class="container-menu-t-b">
+          <div class="menu-category-t-b">
+            <div class="list-choice-category" data-target="sach-trong-nuoc-t-b">
+              <div>
+                <hh></hh>
+              </div>
+
+              <div class="block-item">
+                <img src="../../assets/img/menu/icon-red-book.png" alt="" />
+
+                <div class="title-item">Sách trong nước</div>
+              </div>
+            </div>
+
+            <div class="list-choice-category" data-target="sach-ngoai-nuoc-t-b">
+              <div>
+                <hh></hh>
+              </div>
+
+              <div class="block-item">
+                <img src="../../assets/img/menu/icon-book.png" alt="" />
+
+                <div class="title-item">Sách nước ngoài</div>
+              </div>
+            </div>
+
+            <div class="list-choice-category" data-target="figure-t-b">
+              <div>
+                <hh></hh>
+              </div>
+
+              <div class="block-item">
+                <img src="../../assets/img/menu/japanese-dolls.png" alt="" />
+
+                <div class="title-item">Figure</div>
+              </div>
+            </div>
+
+            <div class="list-choice-category" data-target="manga-t-b">
+              <div>
+                <hh></hh>
+              </div>
+
+              <div class="block-item">
+                <img src="../../assets/img/menu/orange-book.png" alt="" />
+
+                <div class="title-item">Manga</div>
+              </div>
+            </div>
+
+            <div class="list-choice-category" data-target="do-luu-niem-t-b">
+              <div>
+                <hh></hh>
+              </div>
+
+              <div class="block-item">
+                <img src="../../assets/img/menu/wrapped-gift.png" alt="" />
+
+                <div class="title-item">Đồ lưu niệm</div>
+              </div>
+            </div>
+
+            <div class="list-choice-category" data-target="dung-cu-hoc-tap-t-b">
+              <div>
+                <hh></hh>
+              </div>
+
+              <div class="block-item">
+                <img src="../../assets/img/menu/ruler.png" alt="" />
+
+                <div class="title-item">Dụng cụ học tập</div>
+              </div>
+            </div>
+
+            <div class="list-choice-category" data-target="about-us-t-b">
+              <div>
+                <hh></hh>
+              </div>
+
+              <div class="block-item">
+                <img src="../../assets/img/menu/user-groups.png" alt="" />
+
+                <div class="title-item">Về chúng tôi</div>
+              </div>
+            </div>
+
+            <div class="list-choice-category" data-target="contact-us-t-b">
+              <div>
+                <hh></hh>
+              </div>
+
+              <div class="block-item">
+                <img src="../../assets/img/menu/phone.png" alt="" />
+
+                <div class="title-item">Thông tin liên hệ</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-menu-content-t-b">
+            <div class="container-menu-content-items">
+              <div
+                class="row-container-content-items sach-trong-nuoc-t-b active-tb"
+              >
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/textbook/hai_so_phan.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Văn học</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="background-image: url(../../assets/img/books/lightnovel/slime.jpg)"
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Light Novel</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/self-help/ki_nang_song.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Kỹ năng sống</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/self-help/tu_tot_den_vi_dai.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Kinh tế</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/textbook/english-grammar-in-use-1.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Ngoại ngữ</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/science/nguon-goc-cac-loai-sach-kh.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Khoa học</div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row-container-content-items sach-ngoai-nuoc-t-b">
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/textbook/hai_so_phan.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Văn học</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="background-image: url(../../assets/img/books/lightnovel/arifureta.jpeg)"
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Light Novel</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/self-help/ki_nang_song.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Kỹ năng sống</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/self-help/tu_tot_den_vi_dai.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Kinh tế</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/science/nguon-goc-cac-loai-sach-kh.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Khoa học</div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row-container-content-items figure-t-b">
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/characters/nekopara.png);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Vtuber</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="background-image: url(../../assets/img/characters/chino.png)"
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Anime</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="background-image: url(../../assets/img/characters/mona.png)"
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Game</div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row-container-content-items manga-t-b">
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/manga/manga_has_color.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Manga có màu</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/books/manga/manga_conan.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Manga thường</div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row-container-content-items do-luu-niem-t-b">
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/stationery/accessories/moc_khoa.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Móc khoá</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/stationery/accessories/bookmark.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Bookmark</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/stationery/accessories/postcard.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Postcard</div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row-container-content-items dung-cu-hoc-tap-t-b">
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="background-image: url(../../assets/img/stationery/accessories/ruler.jpg)"
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Thước kẻ</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="background-image: url(../../assets/img/stationery/pens/but_bi.jpg)"
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Bút viết</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="
+                          background-image: url(../../assets/img/stationery/files/bia_kep_ho_so.jpg);
+                        "
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Bìa kẹp</div>
+                  </a>
+                </div>
+
+                <div class="col-container-content-items">
+                  <a href="">
+                    <div>
+                      <div
+                        class="img-content-item"
+                        style="background-image: url(../../assets/img/stationery/accessories/casio.jpg)"
+                      ></div>
+                    </div>
+                    <div class="text-content-item">Máy tính</div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row-container-content-items about-us-t-b">
+                <div class="col-container-content-items">
+                  <div class="introduct-company-t-b">
+                    <h4 class="title-company-t-b">Về Light Book</h4>
+                    <p class="description-company-t-b">
+                      Light Book là một công ty nhà sách uy tín và chuyên nghiệp
+                      với đội ngũ nhân viên giàu kinh nghiệm và nhiệt tình. Công
+                      ty chúng tôi cung cấp cho khách hàng một loạt các sản phẩm
+                      sách đa dạng và phong phú, từ sách giáo khoa, sách văn
+                      học, các tác phẩm về light novel đến sách kỹ năng sống.
+                    </p>
+
+                    <h4 class="title-company-t-b">Cam kết</h4>
+                    <p class="description-company-t-b">
+                      Chúng tôi cam kết đem đến cho khách hàng những trải nghiệm
+                      mua sắm thú vị và chất lượng cao nhất. Với sự tận tâm và
+                      chuyên nghiệp, chúng tôi tin rằng Book Light sẽ là địa
+                      điểm đáng tin cậy cho tất cả các độc giả và người yêu
+                      sách.
+                    </p>
+
+                    <a href="" class="view-more-t-b">Xem thêm</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row-container-content-items contact-us-t-b">
+                <div class="col-container-content-items">
+                  <div class="form-company-t-b">
+                    <div class="info-company-t-b">
+                      <i class="location-t-b fa-solid fa-location-dot"></i>
+                      <h3>Địa chỉ</h3>
+                      <div class="text-contact-info-t-b">
+                        <p class="address-info-t-b">Quận 10, TP.HCM</p>
+                        <p class="address-info-t-b">40/3, St.Điện Biên Phủ</p>
+                      </div>
+                    </div>
+
+                    <div class="info-company-t-b">
+                      <i class="phone-t-b fa-solid fa-phone"></i>
+                      <h3>Điện thoại</h3>
+                      <div class="text-contact-info-t-b">
+                        <p class="phone-info-t-b">+84 321325324213</p>
+                      </div>
+                    </div>
+
+                    <div class="info-company-t-b">
+                      <i class="email-t-b fa-solid fa-envelope"></i>
+                      <h3>Email</h3>
+                      <div class="text-contact-info-t-b">
+                        <p class="email-info-t-b">lightbook@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-contact-company-t-b">
+                    <div class="message-contact-company-t-b">
+                      <div class="title-message-contact-t-b">
+                        <h3 class="title-message-t-b">
+                          Hãy gửi tin nhắn cho chúng tôi
+                        </h3>
+                        <p class="description-message-t-b">
+                          Nếu bạn có bất kỳ câu hỏi nào vui lòng liên hệ với
+                          chúng tôi để chúng tôi có thể hỗ trợ bạn tốt hơn
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="form-message-to-company">
+                      <form action="">
+                        <div class="form-send-company">
+                          <input
+                            class="form-control-t-b"
+                            required
+                            type="text"
+                            name=""
+                            id=""
+                            placeholder="Nhập tên của bạn"
+                          />
+                        </div>
+
+                        <div class="form-send-company">
+                          <input
+                            class="form-control-t-b"
+                            required
+                            type="email"
+                            name=""
+                            id=""
+                            placeholder="Nhập email của bạn"
+                          />
+                        </div>
+
+                        <div class="form-send-company text-area">
+                          <textarea
+                            class="form-control-t-b message-box-t-b"
+                            required
+                            name=""
+                            id=""
+                            placeholder="Nhập tin nhắn của bạn"
+                          ></textarea>
+                        </div>
+
+                        <div class="send-form-t-b">
+                          <button class="send-btn-t-b">Gửi</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../public/main.js"></script>
+  </body>
+</html>
