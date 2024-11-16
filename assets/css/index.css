@@ -1191,3 +1191,25 @@ footer .footer-container {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
+
+
+.user-info {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+}
+    
+.username {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+}
+    
+.logout-btn {
+        color: #ff0000;
+        text-decoration: none;
+}
+    
+.logout-btn:hover {
+        text-decoration: underline;
+}

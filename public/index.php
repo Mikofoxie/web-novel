@@ -1,3 +1,21 @@
+<?php
+// index.php additions
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+require '../admin/config/database.php';
+
+// Sử dụng prepared statement cho user info query
+if(isset($_SESSION["login"]) && $_SESSION["login"] === true){
+    $id = $_SESSION["id"];
+    $stmt = $conn->prepare("SELECT * FROM tb_login WHERE id = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="vi">
   <head>
@@ -649,10 +667,22 @@
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="js-account"
-                  ><span>Tài khoản</span>
-                  <i class="fa-solid fa-user"></i>
-                </a>
+                <?php if(isset($_SESSION["login"]) && $_SESSION["login"] === true && isset($_SESSION["username"])): ?>
+                    <!-- Đã đăng nhập - Hiển thị tên user -->
+                    <div class="user-info">
+                        <span class="username">
+                            <i class="ri-account-pin-circle-line"></i>
+                            <?php echo htmlspecialchars($_SESSION["username"]); ?>
+                        </span>
+                        <a href="../pages/login/logout.php" class="logout-btn">Đăng xuất</a>
+                    </div>
+                <?php else: ?>
+                    <!-- Chưa đăng nhập - Hiển thị nút tài khoản -->
+                    <a href="javascript:void(0)" class="js-account">
+                        <span>Tài khoản</span>
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                <?php endif; ?>
               </li>
             </ul>
             <!-- Navigation bar End -->
@@ -774,335 +804,38 @@
               </span>
             </div>
             <div class="row-product">
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-1.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/hanh-trinh-cua-elaina-12-1.jpeg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div
-                    class="home-product-title"
-                    title="Hành trình của Elaina tập 12"
-                  >
-                    <p>Hành trình của Elaina tập 12</p>
-                  </div>
-                  <div class="home-product-author">
-                    <p><span>Tác giả: </span>Jougi Shiraishi</p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">70.000đ</span>
-                    <span class="home-product-price-old">108.000đ</span>
-                  </div>
-                  <div class="home-product-buy">
-                    <a href="../pages/products/product-1.html" class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-2.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/Date-A-Live-Encore.jpeg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div
-                    class="home-product-title"
-                    title="Date A Live Encore – Tập 4"
-                  >
-                    <p>Date A Live Encore – Tập 4</p>
-                  </div>
-                  <div class="home-product-author">
-                    <p><span>Tác giả: </span>Koushi Tachibana</p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">89.000đ</span>
-                    <span class="home-product-price-old">118.000đ</span>
-                  </div>
-                  <div class="home-product-buy">
-                    <a href="../pages/products/product-2.html" class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-3.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/The_Angel_Next_Door_Spoils_Me_Rotten.jpg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div class="home-product-title" title="Thiên sứ nhà bên">
-                    <p>Thiên sứ nhà bên</p>
-                  </div>
-                  <div class="home-product-author">
-                    <p>
-                      <span>Tác giả: </span>佐伯さん, はねこと, 芝田わん, 優...
-                    </p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">89.000đ</span>
-                    <span class="home-product-price-old">118.000đ</span>
-                  </div>
-                  <div class="home-product-buy">
-                    <a href="../pages/products/product-3.html" class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-4.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/slime-10.jpg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div
-                    class="home-product-title"
-                    title="Diệt Slime suốt 300 năm - Tập 10"
-                  >
-                    <p>Diệt Slime suốt 300 năm - Tập 10</p>
-                  </div>
-                  <div class="home-product-author">
-                    <p><span>Tác giả: </span>Morita Kisetsu</p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">89.000đ</span>
-                    <span class="home-product-price-old">118.000đ</span>
-                  </div>
-                  <div class="home-product-buy">
-                    <a href="../pages/products/product-4.html" class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-5.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/classroom-of-the-elite.jpg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div
-                    class="home-product-title"
-                    title="Lớp học đề cao thực lực - Tập 4"
-                  >
-                    <p>Lớp học đề cao thực lực - Tập 4</p>
-                  </div>
-                  <div class="home-product-author">
-                    <p><span>Tác giả: </span>Kinugasa Shōgo</p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">89.000đ</span>
-                    <span class="home-product-price-old">118.000đ</span>
-                  </div>
-                  <div class="home-product-buy">
-                    <a href="../pages/products/product-5.html" class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-6.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/arifureta.jpeg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div
-                    class="home-product-title"
-                    title="ARIFURETA – Từ Tầm Thường Đến Bất Khả Chiến Bại – Tập 1"
-                  >
-                    <p>
-                      ARIFURETA – Từ Tầm Thường Đến Bất Khả Chiến Bại – Tập 1
-                    </p>
-                  </div>
-                  <div class="home-product-author">
-                    <p><span>Tác giả: </span>Shirakome Ryo</p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">90.000đ</span>
-                    <span class="home-product-price-old">139.000đ</span>
-                  </div>
-                  <div class="home-product-buy">
-                    <a href="../pages/products/product-6.html" class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-7.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/5_centimet.jpg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div class="home-product-title" title="5 Centimet Trên Giây">
-                    <p>5 Centimet Trên Giây</p>
-                  </div>
-                  <div class="home-product-author">
-                    <p><span>Tác giả: </span>Shinkai Makoto</p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">50.000đ</span>
-                    <span class="home-product-price-old no-price-old"
-                      >80.000đ</span
-                    >
-                  </div>
-                  <div class="home-product-buy">
-                    <a href="../pages/products/product-7.html" class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-8.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/thang_9_khong_co_cau.jpg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div
-                    class="home-product-title"
-                    title="Và Rồi, Tháng 9 Không Có Cậu Đã Tới"
-                  >
-                    <p>Và Rồi, Tháng 9 Không Có Cậu Đã Tới</p>
-                  </div>
-                  <div class="home-product-author">
-                    <p><span>Tác giả: </span>Natsuki Amasawa</p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">89.000đ</span>
-                    <span class="home-product-price-old">118.000đ</span>
-                  </div>
-                  <div class="home-product-buy">
-                    <a href="../pages/products/product-8.html" class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-9.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/ReZero-Kara-Hajimeru-Isekai-Seikatsu.jpg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div
-                    class="home-product-title"
-                    title="Re:Zero Kara Hajimeru Isekai Seikatsu - Tập 1"
-                  >
-                    <p>Re:Zero Kara Hajimeru Isekai Seikatsu - Tập 1</p>
-                  </div>
-                  <div class="home-product-author">
-                    <p><span>Tác giả: </span>Nagatsuki Tappei, 長月 達平</p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">89.000đ</span>
-                    <span class="home-product-price-old">118.000đ</span>
-                  </div>
-                  <div class="home-product-buy">
-                    <a href="../pages/products/product-9.html" class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269"
-              >
-                <a href="../pages/products/product-10.html">
-                  <div
-                    class="product-item-img"
-                    style="
-                      background-image: url('../assets/img/books/lightnovel/hen_uoc_mua_he_.jpg');
-                    "
-                  ></div>
-                </a>
-                <div class="home-product-info">
-                  <div class="home-product-title" title="Hẹn Ước Mùa Hè">
-                    <p>Hẹn Ước Mùa Hè</p>
-                  </div>
-                  <div class="home-product-author">
-                    <p><span>Tác giả: </span>Goya Manaka</p>
-                  </div>
-                  <div class="home-product-price">
-                    <span class="home-product-price-new">89.000đ</span>
-                    <span class="home-product-price-old">118.000đ</span>
-                  </div>
-                  <div class="home-product-buy">
-                    <a
-                      href="../pages/products/product-10.html"
-                      class="home-product-btn-buy"
-                      >Mua ngay</a
-                    >
-                    <div style="clear: both"></div>
-                  </div>
-                </div>
-              </div>
+            <?php
+              $sql = "SELECT * FROM books";
+              $result = $conn->query($sql);
+              if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+        echo '<div class="home-product-item column-2 t-col-3 m-col-6 m-col-12 col-3-1269">';
+        echo '<a href="../pages/products/product-' . $row['id'] . '.html">';
+        echo '<div class="product-item-img" style="background-image: url(\'' . $row['image_url'] . '\');"></div>';
+        echo '</a>';
+        echo '<div class="home-product-info">';
+        echo '<div class="home-product-title" title="' . htmlspecialchars($row['title']) . '">';
+        echo '<p>' . htmlspecialchars($row['title']) . '</p>';
+        echo '</div>';
+        echo '<div class="home-product-author">';
+        echo '<p><span>Tác giả: </span>' . htmlspecialchars($row['author']) . '</p>';
+        echo '</div>';
+        echo '<div class="home-product-price">';
+        echo '<span class="home-product-price-new">' . number_format($row['price'], 0, ',', '.') . 'đ</span>';
+        // Thêm giá cũ nếu có
+        echo '</div>';
+        echo '<div class="home-product-buy">';
+        echo '<a href="../pages/products/product-' . $row['id'] . '.html" class="home-product-btn-buy">Mua ngay</a>';
+        echo '<div style="clear: both"></div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+    }
+    } else {
+        echo '<p>Không có sản phẩm nào!</p>';
+    }
+    $conn->close();
+?>
             </div>
           </div>
           <div class="button-link">
@@ -1581,64 +1314,55 @@
                 <i class="ri-twitter-fill tw-icon"></i>
               </a>
             </div>
-            <form id="login" action="" class="input-group">
-              <input
-                type="text"
-                required
-                class="input-field"
-                placeholder="Nhập tên tài khoản"
-              />
-              <input
-                type="text"
-                required
-                class="input-field"
-                placeholder="Nhập mật khẩu"
-              />
-              <input
-                type="checkbox"
-                class="checkbox"
-                id="remember-login"
-              /><span>
-                <label for="remember-login"> Ghi nhớ đăng nhập </label></span
-              >
-              <a href="" class="forgot-pass">Quên mật khẩu?</a>
-              <button type="submit" class="submit-button">Đăng nhập</button>
+            
+            <form id="login" action="../pages/login/login.php" class="input-group" method="POST" autocomplete="off">
+                <input type="text" 
+                      required 
+                      class="input-field" 
+                      name="usernameemail" 
+                      id="usernameemail" 
+                      placeholder="Tên đăng nhập hoặc email"
+                      minlength="3"/>
+                
+                <input type="password" 
+                      required 
+                      class="input-field" 
+                      name="password" 
+                      id="password" 
+                      placeholder="Mật khẩu"
+                      minlength="8"/>
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" 
+                          class="checkbox" 
+                          name="remember-login" 
+                          id="remember-login"/>
+                    <label for="remember-login">Ghi nhớ đăng nhập</label>
+                </div>
+
+                <a href="../pages/login/forgot-password.php" class="forgot-pass">Quên mật khẩu?</a>
+                
+                <button type="submit" 
+                        name="login-submit" 
+                        class="submit-button">
+                    Đăng nhập
+                </button>
             </form>
-            <form id="register" action="" class="input-group">
-              <input
-                type="text"
-                required
-                class="input-field"
-                placeholder="Nhập tên tài khoản"
-              />
-              <input
-                type="email"
-                required
-                class="input-field"
-                placeholder="Nhập email"
-              />
-              <input
-                type="text"
-                required
-                class="input-field"
-                placeholder="Nhập mật khẩu"
-              />
-              <input
-                type="text"
-                required
-                class="input-field"
-                placeholder="Nhập lại mật khẩu"
-              />
-              <input
-                type="checkbox"
-                class="checkbox"
-                id="agree-to-the-terms"
-              /><span>
-                <label for="agree-to-the-terms"
-                  >Tôi đồng ý với điều khoản và dịch vụ
-                </label>
-              </span>
-              <button type="submit" class="submit-button">Đăng Ký</button>
+
+            <form id="register" action="../pages/login/register.php" class="input-group" method="POST" autocomplete="off">
+                <input type="text" required class="input-field" name="username" id="username" 
+                      placeholder="Nhập tên tài khoản" minlength="3" />
+                <input type="email" required class="input-field" name="email" id="email" 
+                      placeholder="Nhập email" />
+                <input type="password" required class="input-field" name="password" id="password" 
+                      placeholder="Nhập mật khẩu" minlength="8" />
+                <input type="password" required class="input-field" name="confirmpassword" id="confirmpassword" 
+                      placeholder="Nhập lại mật khẩu" minlength="8" />
+                <div class="checkbox-container">
+                    <input type="checkbox" required class="checkbox" name="agree-to-the-terms" id="agree-to-the-terms"/>
+                    <label for="agree-to-the-terms">Tôi đồng ý với điều khoản và dịch vụ</label>
+                </div>
+                <button type="submit" name="submit" class="submit-button">Đăng Ký</button>
             </form>
           </div>
         </div>

@@ -1,19 +1,25 @@
-Folder PATH listing
-Volume serial number is 26B9-B731
-C:.
+Folder PATH listing for volume data
+Volume serial number is 15DE-C800
+E:.
 |   myproject.txt
 |   
 +---admin
 |   |   add_product.php
 |   |   edit_product.php
 |   |   index.php
+|   |   process_add.php
 |   |   remove_product.php
 |   |   
 |   +---config
 |   |       database.php
 |   |       
-|   \---styles
-|           Admin.css
+|   +---styles
+|   |       Admin.css
+|   |       
+|   \---uploads
+|           1731739756_download.jpg
+|           1731740013_wojak_studio.png
+|           1731740113_images.jpg
 |           
 +---assets
 |   +---css
@@ -35,7 +41,7 @@ C:.
 |   |           faq.css
 |   |           product.css
 |   |           
-|   +---fonts              
+|   +---fonts   
 |   \---img
 |       |   ico_login.svg
 |       |   
@@ -133,6 +139,11 @@ C:.
 |   +---faq
 |   |       faq.html
 |   |       
+|   +---login
+|   |       login.php
+|   |       logout.php
+|   |       register.php
+|   |       
 |   \---products
 |           product-1.html
 |           product-10.html
@@ -146,6 +157,6 @@ C:.
 |           product-9.html
 |           
 \---public
-        index.html
+        index.php
         main.js
         

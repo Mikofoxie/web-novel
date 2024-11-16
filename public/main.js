@@ -25,6 +25,9 @@ const mediaQuery = window.matchMedia("(max-width: 1150px)");
 
 const faqs = document.querySelectorAll(".col-faq-content");
 
+const userDropdown = document.getElementById('userDropdown');
+const dropdownContent = document.querySelector('.dropdown-content');
+
 var counter = 1;
 
 // PC
@@ -155,3 +158,20 @@ faqs.forEach((faq) => {
     faq.classList.toggle("active-faq");
   });
 });
+
+if(userDropdown) {
+  userDropdown.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Toggle dropdown visibility
+      if(dropdownContent) {
+          dropdownContent.classList.toggle('show');
+      }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+      if (!userDropdown.contains(e.target) && dropdownContent) {
+          dropdownContent.classList.remove('show');
+      }
+  });
+}
