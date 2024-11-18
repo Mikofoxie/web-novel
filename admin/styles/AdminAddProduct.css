@@ -1,0 +1,150 @@
+/* Reset & box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body with mocha gradient background */
+body {
+    background: linear-gradient(135deg, #f3e5d8, #e6d5c3);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #2c1810;
+    line-height: 1.6;
+}
+
+/* Elegant mocha input elements */
+.form-control,
+.form-control[type="file"],
+.form-select,
+textarea {
+    border-radius: 4px;
+    padding: 14px 18px;
+    border: 1px solid #8b5e3c;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #4a2c1d;
+    font-size: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 6px rgba(139, 94, 60, 0.1);
+    resize: none;
+    height: auto;
+}
+
+/* Special style for textarea */
+textarea {
+    background: linear-gradient(to bottom right, #fff, #f9f3ed);
+    border: 2px solid #8b5e3c !important;
+    min-height: 120px;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+/* Style for input file */
+.form-control[type="file"] {
+    padding: 10px 15px;
+    background: linear-gradient(to right, #d4b59e, #c4a389);
+    color: #2c1810;
+    border-color: #a67c52;
+}
+
+.form-control[type="file"]::file-selector-button {
+    background: #8b5e3c;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+}
+
+.form-control[type="file"]::file-selector-button:hover {
+    background: #6d4c41;
+    transform: translateY(-1px);
+}
+
+/* Advanced focus effect */
+.form-control:focus,
+.form-select:focus {
+    border-color: #6d4c41;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Button with gradient and effects */
+.btn {
+    border-radius: 12px;
+    background: linear-gradient(145deg, #8b5e3c, #6d4c41);
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(139, 94, 60, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+    background: linear-gradient(145deg, #6d4c41, #5d4037);
+    box-shadow: 0 6px 20px rgba(109, 76, 65, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: linear-gradient(145deg, #a67c52, #8b5e3c);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(145deg, #8b5e3c, #6d4c41);
+    box-shadow: 0 6px 20px rgba(139, 94, 60, 0.3);
+}
+
+/* Select with mocha style */
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238b5e3c' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 40px;
+}
+
+.form-select:focus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236d4c41' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+}
+
+/* Add hover effects to inputs */
+.form-control:hover,
+.form-select:hover,
+textarea:hover {
+    border-color: #6d4c41;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(139, 94, 60, 0.15);
+}
+
+/* Placeholder style */
+::placeholder {
+    color: #a67c52;
+    opacity: 0.7;
+}
+
+/* Custom scrollbar for textarea */
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f3e5d8;
+    border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #8b5e3c;
+    border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #6d4c41;
+}

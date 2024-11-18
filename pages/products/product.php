@@ -1,3 +1,26 @@
+<?php
+require_once '../../admin/config/database.php';
+
+// Lấy ID từ URL
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+  $product_id = intval($_GET['id']);
+
+  // Truy vấn chi tiết sản phẩm từ database
+  $sql = "SELECT * FROM books WHERE id = $product_id";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+    $product = $result->fetch_assoc();
+  } else {
+    die('Sản phẩm không tồn tại!');
+  }
+} else {
+  die('ID sản phẩm không hợp lệ!');
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +61,7 @@
     <header id="header">
       <div class="header-container">
         <div class="nav-logo-mobile">
-          <a href="../../public/index.html">
+          <a href="../../public/index.php">
             <img src="../../assets/img/logo/book-logo.png" alt="" />
             <h1>Light Book</h1>
           </a>
@@ -47,7 +70,7 @@
         <!-- Thẻ chứa item nav container -->
         <div class="nav-container">
           <div class="nav-img">
-            <a href="../../public/index.html">
+            <a href="../../public/index.php">
               <img src="../../assets/img/logo/book-logo.png" alt="" />
               <h1>Light Book</h1>
             </a>
@@ -584,7 +607,7 @@
                     <div class="warning-notlogin">xem thông báo</div>
                   </div>
 
-                 <div class="wrap-notification">
+                  <div class="wrap-notification">
                     <a class="notification-list" href="">
                       <img
                         src="../../assets/img/books/lightnovel/LN_10-C_VN_result.jpg"
@@ -682,11 +705,8 @@
         <div class="row-product-item">
           <div class="col-product-image full-width-mobile">
             <div class="wrap-img">
-              <img
-                src="../../assets/img/books/lightnovel/Date-A-Live-Encore.jpeg"
-                alt=""
-                class="img-product"
-              />
+            <img class="img-product" src="../../admin/<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
+
               <div class="options-product">
                 <div class="row-options-product">
                   <div class="col-options-product">
@@ -720,7 +740,7 @@
                   <span class="icon-list-text">
                     <span class="post-info">
                       <a href="" class="post-info__terms-list-item"
-                        >Light novel,</a
+                        ><?php echo htmlspecialchars($product['category']); ?>,</a
                       >
                       <a href="" class="post-info__terms-list-item">Sách,</a>
                       <a href="" class="post-info__terms-list-item">Sách mới</a>
@@ -731,14 +751,14 @@
 
               <div class="container-heading-title-product">
                 <h2 class="heading-title-product">
-                  <a href="">Date a live Encore – Tập 4</a>
+                  <a href=""><?php echo htmlspecialchars($product['title']); ?></a>
                 </h2>
               </div>
 
               <div class="container-price-product">
                 <div class="price-product">
                   <b>Giá:</b>
-                  <span>89.000đ</span>
+                  <span><?php echo number_format($product['price'], 0, ',', '.'); ?>đ</span>
                 </div>
               </div>
 
@@ -748,27 +768,27 @@
                     <div class="wrap-boxed-info-product">
                       <div class="author-container-info-product">
                         <b>Tác giả:</b>
-                        <span>Koushi Tachibana</span>
+                        <span><?php echo htmlspecialchars($product['author']); ?></span>
                       </div>
 
                       <div class="illustrator-container-info-product">
                         <b>Người minh họa / Nghệ sĩ:</b>
-                        <span></span>
+                        <span><?php echo htmlspecialchars($product['illustrator']); ?></span>
                       </div>
 
                       <div class="translator-container-info-product">
                         <b>Dịch giả:</b>
-                        <span>Tài thịnh</span>
+                        <span><?php echo htmlspecialchars($product['translator'] ?? 'Không có'); ?></span>
                       </div>
 
                       <div class="size-container-info-product">
                         <b>Khổ sách:</b>
-                        <span>18 x 13 cm</span>
+                        <span><?php echo htmlspecialchars($product['book_size'] ?? 'Hiện chưa có tác giả'); ?></span>
                       </div>
 
                       <div class="cover-book-container-info-product">
                         <b>Loại bìa:</b>
-                        <span>Bìa mềm</span>
+                        <span><?php echo htmlspecialchars($product['cover_type'] ?? 'Không có thông tin'); ?></span>
                       </div>
                     </div>
                   </div>
@@ -777,22 +797,22 @@
                     <div class="wrap-boxed-info-product">
                       <div class="number-of-pages-container-info-product">
                         <b>Số trang:</b>
-                        <span>332</span>
+                        <span><?php echo htmlspecialchars($product['page_count'] ?? 'N/A'); ?></span>
                       </div>
 
                       <div class="ISBN-container-info-product">
                         <b>ISBN:</b>
-                        <span>978-604-359-031-9</span>
+                        <span><?php echo htmlspecialchars($product['isbn'] ?? 'N/A'); ?></span>
                       </div>
 
                       <div class="release-container-info-product">
                         <b>NXB:</b>
-                        <span>Hà nội</span>
+                        <span><?php echo htmlspecialchars($product['publisher'] ?? 'N/A'); ?></span>
                       </div>
 
                       <div class="year-container-info-product">
                         <b>Năm XB:</b>
-                        <span>2022</span>
+                        <span><?php echo htmlspecialchars($product['publish_year'] ?? 'N/A'); ?></span>
                       </div>
                     </div>
                   </div>
@@ -811,8 +831,7 @@
                     <div class="col-description-gift-container">
                       <div class="wrap-text-gift">
                         <b
-                          >2 postcard 10x15cm, random 1 card PVC trong (có thể
-                          có hoặc không có card này)</b
+                          ><?php echo htmlspecialchars($product['gifts'] ?? 'Sản phẩm này hiện chưa có quà tặng'); ?></b
                         >
                       </div>
                     </div>
@@ -871,28 +890,8 @@
 
               <div class="text-warp-editor">
                 <div class="text-editor">
-                  <h2>Date a live Encore – Tập 4</h2>
-                  <p>
-                    “Xin chào mọi người, đã lâu không gặp. Là tôi, Tachibana
-                    đây. Lần này tôi xin phép được gửi đến các bạn độc giả ‘Date
-                    a live Encore tập 4’ với trang bìa là cô gái chỉ huy trẻ
-                    tuổi của chúng ta. Do là ‘Encore’ nên tập này chỉ toàn
-                    truyện ngắn, có điều, những chương truyện ngắn trong tập này
-                    không được đăng trên Dragon Magazine như mọi khi, mà là một
-                    món quà tặng kèm cho phiên bản Blu-ray &DVD của anime ‘Date
-                    a live’. Do đó, mạch thời gian trong truyện chỉ tính đến hết
-                    phần 1 của anime, tức tập 4 của chính truyện.”
-
-                    <br />– Trích Lời bạt – Tachinaba Koushi.<br />
-
-                    Nối tiếp tập 3, Date a live Encore 4 mang đến cho độc giả 7
-                    chương truyện ngắn, trong đó mỗi chương là một câu chuyện
-                    khác nhau về các tinh linh. Giờ, hãy cùng theo dõi những
-                    cuộc hẹn sống còn có một không hai này của họ đi nào. Hy
-                    vọng độc giả sẽ đón nhận và ủng hộ cho Date a live Encore –
-                    Tập 4 ở tất cả các phiên bản: thường – boxset có tem bản
-                    quyền Kadokawa
-                  </p>
+                  <h2><?php echo htmlspecialchars($product['title'] ?? 'N/A'); ?></h2>
+                  <p><?php echo htmlspecialchars($product['description'] ?? 'Hiện chưa có mô tả nào'); ?></p>
                 </div>
               </div>
             </div>
@@ -908,7 +907,7 @@
             <h3 class="heading-footer">Công ty</h3>
             <ul>
               <li class="content-footer">
-                <a href="../../pages/about/aboutus.html">Về chúng tôi</a>
+                <a href="../about/aboutus.html">Về chúng tôi</a>
               </li>
               <li class="content-footer">
                 <a href="">Dịch vụ của chúng tôi</a>
@@ -926,7 +925,7 @@
             <h3 class="heading-footer">Nhận sự giúp đỡ</h3>
             <ul>
               <li class="content-footer">
-                <a href="../../pages/faq/faq.html">FAQ</a>
+                <a href="../faq/faq.html">FAQ</a>
               </li>
               <li class="content-footer">
                 <a href="">Dịch vụ vận chuyển</a>

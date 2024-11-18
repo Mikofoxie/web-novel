@@ -2,7 +2,6 @@
 require_once '../admin/config/database.php'
 ?>
 
-<!-- index.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +10,7 @@ require_once '../admin/config/database.php'
     <title>Admin - Quản lý Sản phẩm</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .product-image {
-            width: 100px;
-            height: auto;
-        }
-        .action-buttons {
-            white-space: nowrap;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/Admin.css">
 </head>
 <body>
     <div class="container mt-4">
@@ -34,25 +25,24 @@ require_once '../admin/config/database.php'
             <thead class="table-dark">
                 <tr>
                     <th>ID</th>
-                    <th>Hình ảnh</th>
+                    <th>Hình ảnh sản phẩm</th>
                     <th>Tên sách</th>
                     <th>Giá</th>
-                    <th>Thao tác</th>
+                    <th>Cập nhật</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 // Lấy danh sách sản phẩm
-                $sql = "SELECT id, title, price, image_url FROM books ORDER BY id DESC";
+                $sql = "SELECT id, title, price, image_url FROM books ORDER BY id ASC";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
+
                     while($row = $result->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>".$row['id']."</td>";
-                       
-                        echo '<div class="product-item-img" style="background-image: url(\'../' . htmlspecialchars($row['image_url']) . '\');"></div>';
-                       
+                        echo "<td><img src='" . htmlspecialchars($row['image_url']) . "' alt='Sản phẩm' class='product-image'><br></td>";
                         echo "<td>".$row['title']."</td>";
                         echo "<td>".number_format($row['price'], 0, ',', '.')."đ</td>";
                         echo "<td class='action-buttons'>";
@@ -63,7 +53,7 @@ require_once '../admin/config/database.php'
                     }
 
                 } else {
-                    echo "<tr><td colspan='5' class='text-center'>Không có sản phẩm nào</td></tr>";
+                    echo "<tr><td colspan='5' class='text-center' >Không có sản phẩm nào</td></tr>";
                 }
                 ?>
             </tbody>

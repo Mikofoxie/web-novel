@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm Sản phẩm Mới</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/AdminAddProduct.css">
 </head>
 <body>
     <div class="container mt-4">
@@ -24,6 +25,11 @@
                     </div>
 
                     <div class="mb-3">
+                        <label for="illustrator" class="form-label">Vẽ minh hoạ</label>
+                        <input type="text" class="form-control" id="illustrator" name="illustrator" required>
+                    </div>
+
+                    <div class="mb-3">
                         <label for="translator" class="form-label">Dịch giả</label>
                         <input type="text" class="form-control" id="translator" name="translator">
                     </div>
@@ -35,8 +41,14 @@
 
                     <div class="mb-3">
                         <label for="page_count" class="form-label">Số trang</label>
-                        <input type="number" class="form-control" id="page_count" name="page_count">
+                        <input type="number" class="form-control" id="page_count" name="page_count" min="1" required oninput="this.value = Math.abs(this.value)" placeholder="Vui lòng nhập số trang">
                     </div>
+
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Thể loại</label>
+                        <input type="text" class="form-control" id="category" name="category" required>
+                    </div>
+
                 </div>
 
                 <!-- Cột phải -->
@@ -69,6 +81,11 @@
                             <option value="Bìa cứng">Bìa cứng</option>
                         </select>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="gifts" class="form-label">Quà tặng kèm</label>
+                        <input type="text" class="form-control" id="gifts" name="gifts">
+                    </div>
                 </div>
 
                 <!-- Phần hình ảnh -->
@@ -77,6 +94,17 @@
                     <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
                 </div>
 
+                <div class="mb-3 col-12">
+                    <label for="description" class="form-label">Mô tả sản phẩm</label>
+                    <textarea 
+                    class="form-control" 
+                    id="description" 
+                    name="description" 
+                    rows="5"
+                    placeholder="Nhập mô tả chi tiết về sản phẩm..."
+                    ></textarea>
+                </div>
+                
                 <!-- Nút submit và quay lại -->
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
