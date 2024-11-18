@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
-@import url(./animation.css);
-@import url(./base.css);
+@import url(../css/components/animation.css);
+@import url(../css/base/base.css);
 
 :root {
         --search-header-border: 12px;
