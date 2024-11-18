@@ -1,5 +1,5 @@
-@import url(./base.css);
-@import url(./animation.css);
+@import url(../base/base.css);
+@import url(../components/animation.css);
 #loading {
   z-index: 1000;
   position: fixed;
