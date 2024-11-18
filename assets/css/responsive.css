@@ -314,7 +314,7 @@
 @media (min-width: 64em) {
   .menu-options-m,
   .menu-app {
-    display: none;
+    display: none !important;
   }
   .menu-overlay {
     display: none;
