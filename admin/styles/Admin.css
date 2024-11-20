@@ -142,6 +142,14 @@ body::before {
     margin-bottom: 5px;
 }
 
+/* Styling for book title truncation */
+.table td.book-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Điều chỉnh độ rộng tối đa */
+}
+
 .action-buttons .btn:last-child {
     margin-right: 0;
 }
@@ -171,3 +179,4 @@ body::before {
         margin: 1rem auto;
     }
 }
+

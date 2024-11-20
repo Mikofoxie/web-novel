@@ -38,12 +38,11 @@ require_once '../admin/config/database.php'
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-
                     while($row = $result->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>".$row['id']."</td>";
                         echo "<td><img src='" . htmlspecialchars($row['image_url']) . "' alt='Sản phẩm' class='product-image'><br></td>";
-                        echo "<td>".$row['title']."</td>";
+                        echo "<td class='book-title'>".htmlspecialchars($row['title'])."</td>";
                         echo "<td>".number_format($row['price'], 0, ',', '.')."đ</td>";
                         echo "<td class='action-buttons'>";
                         echo "<a href='edit_product.php?id=".$row['id']."' class='btn btn-primary btn-sm me-2'><i class='fas fa-edit'></i> Sửa</a>";
@@ -51,7 +50,6 @@ require_once '../admin/config/database.php'
                         echo "</td>";
                         echo "</tr>";
                     }
-
                 } else {
                     echo "<tr><td colspan='5' class='text-center' >Không có sản phẩm nào</td></tr>";
                 }
